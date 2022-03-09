@@ -1,3 +1,17 @@
+require('dotenv').config(
+  {
+    path: `.env.${process.env.NODE_ENV}`
+  }
+)
+
+process.env.SECRET = 'my_secret';
+process.env.GATSBY_DISK_API = 'disk_api';
+
+console.log('-'.repeat(20));
+console.log(process.env.GATSBY_API_URL);
+console.log(process.env.API_KEY);
+console.log('-'.repeat(20));
+
 module.exports = {
   siteMetadata: {
     title: `Title from siteMetadata`,
