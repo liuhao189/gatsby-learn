@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby'
-//@ts-ignore
-window.PageName2 = 'my-files'
+import Layout from './../components/layout'
 
 const MyFiles: React.FC = () => {
     return (
-        <>
-            <h1> GATSBY_DISK_API: {process.env.GATSBY_DISK_API}</h1>
-            <h1>SECRET:{process.env.SECRET}</h1>
-            <p><Link to='/app/'>App</Link></p>
-        </>
+        <Layout>
+            <h1>Hello World</h1>
+        </Layout>
     )
 };
+
 
 export default MyFiles;
