@@ -7,11 +7,6 @@ require('dotenv').config(
 process.env.SECRET = 'my_secret';
 process.env.GATSBY_DISK_API = 'disk_api';
 
-console.log('-'.repeat(20));
-console.log(process.env.GATSBY_API_URL);
-console.log(process.env.API_KEY);
-console.log('-'.repeat(20));
-
 module.exports = {
   siteMetadata: {
     title: `Title from siteMetadata`,
@@ -26,12 +21,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
