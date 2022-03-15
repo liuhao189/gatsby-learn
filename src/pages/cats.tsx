@@ -9,6 +9,7 @@ const Cats: React.FC = ({ data }) => {
     return (
         <Layout>
             <h1>I love the cats!</h1>
+            <img src='/images/cat-1.jpeg' alt='cat-1'></img>
             <GatsbyImage image={img} alt="the cat"></GatsbyImage>
         </Layout >
     )
