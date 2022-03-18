@@ -2,8 +2,12 @@ import React from 'react'
 import './src/styles/global.css';
 import  WrapElement  from './src/components/wrap-page';
 
+import RootWrap from './src/components/wrap-root';
+
+export const wrapRootElement = (props) => {
+  return <RootWrap {...props}></RootWrap>
+}
+
 export const wrapPageElement = (apiContext, pluginOptions) => {
-  console.log('apiContext', apiContext);
-  console.log('pluginOptions', pluginOptions);
   return (<WrapElement {...apiContext.props}>{apiContext.element}</WrapElement>);
 }
