@@ -13,6 +13,7 @@
     "gatsby-plugin-offline": "^5.9.0",
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-sharp": "^4.9.0",
+    "jQuery": "npm:jquery@^3.6.0",
     "prop-types": "^15.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

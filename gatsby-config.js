@@ -1,19 +1,19 @@
-require('dotenv').config(
-  {
-    path: `.env.${process.env.NODE_ENV}`
-  }
-)
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
 
 process.env.SECRET = 'my_secret';
 process.env.GATSBY_DISK_API = 'disk_api';
 
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Learn Gatsby demo`,
+    description: `Gatsby-learn`,
+    author: `liuhao`,
   },
+  // flags: {
+  //   // FAST_DEV: true,
+  // },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -35,16 +35,14 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
-    // `my-plugin`
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
+  polyfill: false,
+  proxy: {
+    prefix: '/api',
+    url: 'http://localhost:7823'
+  }
 }

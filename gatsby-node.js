@@ -1,5 +1,9 @@
 const path = require('path');
 
+exports.onPostBuild = ({ reporter }) => {
+  reporter.info(`Your Gatsby site has been built!`);
+}
+
 exports.createPages = async({ actions, graphql }) => {}
 
 const { createFilePath } = require('gatsby-source-filesystem');
@@ -15,4 +19,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug
     })
   }
+}
+
+
+exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions }) => {
+  actions.setWebpackConfig({
+    externals: {
+      'jQuery': '$'
+    }
+  })
 }
