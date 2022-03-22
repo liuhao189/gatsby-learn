@@ -1,6 +1,6 @@
 html {
     background-color: #ddd;
-    background-image: url("./../images/girl.jpeg");
+    /* background-image: url("./../images/girl.jpeg"); */
     background-size: contain;
     background-repeat: no-repeat;
 }
